@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div >
+        <h1>h1</h1>
+        <p id = "p">Before clicking</p>
+        <button onclick="click1()">btn</button>
+    
+        <h1>h2</h1>
+        <p id = "p">text</p>
+        <button onclick="click2()">btn2</button>
+   
+        <h1>h3</h1>
+        <p id = "p">paragraphs content</p>
+        <button onclick="click3()">btn3</button>
+
+    <p></p>
+        <img src="sdu.png" id = "sduimg" style="width: 400px; height: 400px;"  onmouseover="click4()" onmouseout="click5()">
+        <button onclick="click4()">btn4</button>
+        <button onclick="click6()">btn5</button>
+    </div>
+    
+</body>
+<script>
+    function click1(){
+        document.getElementById("p").innerHTML = "After clicking";
+    };
+    function click2(){
+        document.getElementsByTagName("p")[0].innerHTML = "new text";
+        document.getElementsByTagName("p")[1].innerHTML = "new text";
+        document.getElementsByTagName("p")[2].innerHTML = "new text";
+    }
+    function click3(){
+        document.getElementsByTagName("h1")[0].innerHTML = "header1";
+        document.getElementsByTagName("h1")[1].innerHTML = "header2";
+        document.getElementsByTagName("h1")[2].innerHTML = "header3";
+    }
+    function click4(){
+        document.getElementById("sduimg").src="sdu4.png";
+    }
+    function click5(){
+        document.getElementById("sduimg").src="sdu.png";
+    }
+    function click6(){
+        document.getElementById("sduimg").style.width = "200px";
+        document.getElementById("sduimg").style.height = "200px";
+    }
+</script>
+</html>
